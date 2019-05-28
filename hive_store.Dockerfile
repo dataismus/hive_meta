@@ -14,3 +14,6 @@ ENV CLASSPATH $CLASSPATH:${HIVE_HOME}/lib/*:.
 
 # ALWAYS chmod +x shell scripts before COPY!
 COPY start.sh /
+CMD "/bin/sh start.sh"
+
+# docker run -d --rm -p 9000:9000 -p 50070:50070 -p 8088:8088 -p 9999:9999 --name hive dataismus/hive_store
