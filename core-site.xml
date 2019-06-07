@@ -17,12 +17,8 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-  <property>		 
-    <name>fs.defaultFS</name>
-    <value>hdfs://container_name:9000</value>
-  </property>
-  <property>
-    <name>fs.default.name</name>
-    <value>hdfs://container_name:9000</value>
-  </property>
+    <property>		
+        <name>fs.defaultFS</name>
+        <value>hdfs://master:8020</value>
+    </property>
 </configuration>

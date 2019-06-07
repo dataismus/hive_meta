@@ -12,9 +12,12 @@ COPY hive-env.sh ${HIVE_HOME}/conf/hive-env.sh
 ENV CLASSPATH $CLASSPATH:${HADOOP_HOME}/lib/*:.
 ENV CLASSPATH $CLASSPATH:${HIVE_HOME}/lib/*:.
 
+# EXPOSE 9870
+
 # ALWAYS chmod +x shell scripts before COPY!
+RUN mkdir $HADOOP_HOME/logs && chmod 777 $HADOOP_HOME/logs
 COPY start.sh /
 CMD "/start.sh"
 
-# docker run -it --rm -p 9000:9000 -p 50070:50070 -p 8088:8088 
-# -p 9999:9999 --name=container_name --hostname=container_name dataismus/hive_store
+# docker run -it --rm -p 9000:9000 -p 50070:50070 -p 8088:8088  \
+# -p 9999:9999 --name=hadoop --hostname=master dataismus/hive_store
