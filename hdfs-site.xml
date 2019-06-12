@@ -21,16 +21,30 @@
       <name>dfs.replication</name>
       <value>1</value>
    </property>
-   <property>
+
+   <!-- <property>
+      <name>dfs.datanode.ipc.address</name>
+      <value>0.0.0.0:50020</value>
+   </property> -->
+
+   <!-- <property>
+      <name>dfs.namenode.http-address</name>
+      <value>master:50070</value>
+   </property> -->
+
+   <!-- <property>
       <name>dfs.name.dir</name>
       <value>file:///hadoopinfra/hdfs/namenode</value>
-   </property>
-   <property>
+   </property> -->
+
+   <!-- <property>
       <name>dfs.data.dir</name>
       <value>file:///hadoopinfra/hdfs/datanode</value>
-   </property>
+   </property> -->
+
    <!-- <property>
       <name>dfs.permissions.superusergroup</name>
       <value>root</value>
    </property> -->
+
 </configuration>
